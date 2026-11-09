@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Visible focus ring on every interactive element (accessibility). */
+:focus-visible { outline: 3px solid #1FA37A; outline-offset: 2px; }
+
+/* Reusable component classes so we don't repeat long Tailwind strings. */
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition disabled:opacity-50; }
+  .btn-primary { @apply btn bg-pearl-navy text-white hover:opacity-90; }
+  .btn-accent  { @apply btn bg-pearl-green text-white hover:opacity-90; }
+  .btn-ghost   { @apply btn border border-slate-300 bg-white text-pearl-navy hover:bg-pearl-mist; }
+  .input { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900; }
+  .card  { @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm; }
+}
